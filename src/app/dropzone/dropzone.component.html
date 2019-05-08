@@ -1,0 +1,31 @@
+<div
+  [ngStyle]="{ height: height, width: width }"
+  #Dropzone="ngxDropzone"
+  class="dropzone"
+  [id]="id"
+  [dropzone]="config"
+  (reset)="onReset()"
+  (error)="onError($event)"
+  (addedFile)="onAddedFile($event)"
+>
+  <div class="empty-content" [ngClass]="{'d-none': !isEmpty}">
+    <div>
+      <i
+        class="fas fa-3x fa-cloud-upload-alt choose-file-btn image-dropzone"
+      ></i>
+    </div>
+    <span class="choose-file-btn image-dropzone">Choose a file</span>
+    or drag files here
+  </div>
+
+  <div class="preview" [ngClass]="{'d-none': isEmpty}">
+    <div class="image-wrap" [ngStyle]="{ height: privewHeight }">
+      <img *ngIf="imagePreview" [src]="imagePreview" />
+    </div>
+    <span class="choose-file-btn image-dropzone">Choose another file</span>
+    or drag files here
+  </div>
+  <div *ngIf="showError" class="error-message">
+    Max {{ maxFilesize }}MB, {{ extentions }} format only
+  </div>
+</div>

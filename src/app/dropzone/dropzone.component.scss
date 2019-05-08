@@ -1,0 +1,66 @@
+.dropzone {
+    position: relative;
+    width: 100%;
+    padding: 45px;
+  
+    text-align: center;
+    word-wrap: break-word;
+  
+    border-radius: 4px;
+    background-color: #f4f6f7;
+    border: dashed 1px #cfdae4;
+  
+    transition: .45s border-color;
+    overflow: hidden;
+  
+    .empty-content {
+      color: #8b929b;
+  
+      i {
+        margin-bottom: 5px;
+        color: #cfdae4;
+        text-decoration: none;
+        transition: .3s color;
+      }
+
+      &.d-none {
+          display: none;
+      }
+    }
+  
+    .preview {
+      
+      .image-wrap {
+        position: relative;
+        margin-bottom: 15px;
+  
+        img {
+          height: 100%;
+        }
+      }
+
+      &.d-none {
+          display: none;
+      }
+    }
+  
+    .error-message {
+      color: #c9146c;
+    }
+  
+    .choose-file-btn {
+      color: #08a0b7;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  
+  .dropzone.dz-drag-hover {
+    border-color: #08a0b7;
+  
+    .empty-content i {
+      color: #08a0b7;
+    }
+  }
+  
+  
